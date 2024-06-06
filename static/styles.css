@@ -2,85 +2,118 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-image: url("../static/fondo.jpg"); /* Ruta de la imagen de fondo */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../static/fondo.jpg");
     background-size: cover;
     background-position: center;
-    animation: brightness-animation 10s ease infinite alternate; /* Aplica la animación */
+    animation: brightness-animation 10s ease infinite alternate;
 }
 
-@keyframes gradient-animation {
+@keyframes brightness-animation {
     0% {
-        background-color: black; /* Primer color */
+        filter: brightness(100%);
     }
     50% {
-        background-color: #333; /* Segundo color */
+        filter: brightness(70%);
     }
     100% {
-        background-color: black; /* Vuelve al primer color */
+        filter: brightness(100%);
     }
 }
 
-
-h1, h2 {
-    text-align: center;
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
 .info-container {
-    background-color: rgba(128, 128, 128, 0.5); /* Color gris con 50% de transparencia */
+    background-color: rgba(128, 128, 128, 0.5);
     padding: 20px;
     border-radius: 10px;
-    max-width: 400px; /* Ajusta según sea necesario */
-    margin: 20px auto; /* Centra el contenedor horizontalmente */
-    text-align: center;
+    width: 45%; /* Ajusta el ancho según sea necesario */
 }
 
-.responses-container {
-    background-color: rgba(192, 192, 192, 0.5); /* Color gris claro con 50% de transparencia */
+.form-container {
+    background-color: rgba(128, 128, 128, 0.5);
     padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: left;
+    border-radius: 30px;
+    width: 30%; /* Ajusta el ancho según sea necesario */
 }
+h1, h2, p {
+    text-align: center;
+    color: black;
+}
+
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 15%;  /* Ajusta este valor según el tamaño deseado */
+    margin: 0 auto;
+    max-width: 25%;
     height: auto;
 }
 
 form {
-    background-color: rgba(128, 128, 128, 0.5); /* Color gris con 50% de transparencia */
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px; /* Ajusta según sea necesario */
-    margin: 20px auto; /* Centra el contenedor horizontalmente */
-    text-align: center;
+    margin-top: 20px;
+    
 }
 
 label {
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 input {
     margin-top: 5px;
+    margin-bottom: 5px;
     padding: 5px;
     width: 100%;
     box-sizing: border-box;
 }
 
 button {
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
+    
+border-radius: 10px; /* Ajusta el valor según sea necesario */
+    
+    
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+form button[type="submit"] {
+    display: block;
+    border-radius: 10px;
+    background-color: green;
+    margin: 10px auto; /* Ajusta el margen según sea necesario */
+}
+
+.responses-container a {
+    display: block;
+    text-align: center;
+    margin-top: 10px; /* Ajusta según sea necesario */
+    
 }

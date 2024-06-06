@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Lista de Respuestas</h1>
+    <h1>Lista de Resultados</h1>
     <div class="responses-container">
         <ul>
             {% for response in responses %}
@@ -20,7 +20,11 @@
             {% endfor %}
         </ul>
         <br>
+        
         <a href="{{ url_for('home') }}"><button>Regresar al Formulario</button></a>
+        <form action="{{ url_for('clear') }}" method="post" style="display:inline;">
+            <button type="submit">Borrar Registros</button>
+        </form>
     </div>
 </body>
 </html>

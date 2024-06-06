@@ -28,5 +28,10 @@ def submit():
 def response_list():
     return render_template('responses.html', responses=responses)
 
+@app.route('/clear', methods=['POST'])
+def clear():
+    responses.clear()
+    return redirect(url_for('response_list'))
+
 if __name__ == '__main__':
     app.run(debug=True)

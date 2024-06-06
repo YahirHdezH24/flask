@@ -7,32 +7,35 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Universidad Tecnologica de la Huasteca Hidalguense</h1>
-    <h2>Ingeniería en Desarrollo y Gestión de Software</h2>
-    <img src="{{ url_for('static', filename='imagen.png') }}" alt="Imagen de ejemplo">
-    
-    <div class="info-container">
-        <p>Nombre: Yahir Hernandez Hernandez</p>
-        <p>Grupo: 9 -"A"</p>
-        <p>Docente: Dr. Efrén Juárez Castillo</p>
-    </div>
+    <div class="main-container">
+        
+         <div class="info-container">
+            <h1>Universidad Tecnologica de la Huasteca Hidalguense</h1>
+            <h2>Ingeniería en Desarrollo y Gestión de Software</h2>
+            <img src="{{ url_for('static', filename='imagen.png') }}" alt="Imagen de ejemplo">
+            <p>Nombre: Yahir Hernandez Hernandez</p>
+            <p>Grupo: 9 -"A"</p>
+            <p>Docente: Dr. Efrén Juárez Castillo</p>
+         </div>
    
-
-    <h2>Formulario de Registro</h2>
-    <form action="/submit" method="post">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="edad">Edad:</label>
-        <input type="text" id="edad" name="edad" required>
-        <br>
-        <label for="birthdate">Fecha de Nacimiento:</label>
-        <input type="date" id="birthdate" name="birthdate" required>
-        <br>
-        <label for="location">Lugar donde vives actualmente:</label>
-        <input type="text" id="location" name="location" required>
-        <br><br>
-        <button type="submit">Enviar</button>
-    </form>
+            <div class="form-container">
+                <h2>Formulario de Registro</h2>
+             <form action="/submit" method="post">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad" name="edad" required>
+                    <br>
+                    <label for="birthdate">Fecha de Nacimiento:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                    <br>
+                    <label for="location">Lugar donde vives actualmente:</label>
+                    <input type="text" id="location" name="location" required>
+                    <br><br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+    </div>
 </body>
 </html>
