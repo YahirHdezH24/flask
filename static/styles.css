@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("../static/fondo.jpg"); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    animation: brightness-animation 10s ease infinite alternate; /* Aplica la animación */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-color: black; /* Primer color */
+    }
+    50% {
+        background-color: #333; /* Segundo color */
+    }
+    100% {
+        background-color: black; /* Vuelve al primer color */
+    }
+}
+
+
+h1, h2 {
+    text-align: center;
+}
+
+.info-container {
+    background-color: rgba(128, 128, 128, 0.5); /* Color gris con 50% de transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px; /* Ajusta según sea necesario */
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    text-align: center;
+}
+
+.responses-container {
+    background-color: rgba(192, 192, 192, 0.5); /* Color gris claro con 50% de transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 15%;  /* Ajusta este valor según el tamaño deseado */
+    height: auto;
+}
+
+form {
+    background-color: rgba(128, 128, 128, 0.5); /* Color gris con 50% de transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px; /* Ajusta según sea necesario */
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    margin-top: 5px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

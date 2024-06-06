@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Respuestas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Lista de Respuestas</h1>
+    <div class="responses-container">
+        <ul>
+            {% for response in responses %}
+            <li>
+                <strong>Nombre:</strong> {{ response.name }} <br>
+                <strong>Edad:</strong> {{ response.edad }} <br>
+                <strong>Fecha de Nacimiento:</strong> {{ response.birthdate }} <br>
+                <strong>Lugar donde Radica:</strong> {{ response.location }}
+            </li>
+            {% endfor %}
+        </ul>
+        <br>
+        <a href="{{ url_for('home') }}"><button>Regresar al Formulario</button></a>
+    </div>
+</body>
+</html>

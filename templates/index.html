@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Universidad Tecnologica de la Huasteca Hidalguense</h1>
+    <h2>Ingeniería en Desarrollo y Gestión de Software</h2>
+    <img src="{{ url_for('static', filename='imagen.png') }}" alt="Imagen de ejemplo">
+    
+    <div class="info-container">
+        <p>Nombre: Yahir Hernandez Hernandez</p>
+        <p>Grupo: 9 -"A"</p>
+        <p>Docente: Dr. Efrén Juárez Castillo</p>
+    </div>
+   
+
+    <h2>Formulario de Registro</h2>
+    <form action="/submit" method="post">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="edad">Edad:</label>
+        <input type="text" id="edad" name="edad" required>
+        <br>
+        <label for="birthdate">Fecha de Nacimiento:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        <br>
+        <label for="location">Lugar donde vives actualmente:</label>
+        <input type="text" id="location" name="location" required>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
